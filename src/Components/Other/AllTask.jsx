@@ -1,32 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../../Context/AuthProvider'
 
 const AllTask = () => {
-  return (
+
+  const [userData,setUserData]=useContext(AuthContext)
+
+  return ( 
     <div>
       All-Task-Page
-      <div style={{border:"2px solid blue",backgroundColor:"teal"}}>
-        <h2>Sarthak</h2>
-        <h3>make a UT Design</h3>
-        <h5>Status</h5>
-      </div>
-
-       <div style={{border:"2px solid blue",backgroundColor:"teal"}}>
-        <h2>Sarthak</h2>
-        <h3>make a UT Design</h3>
-        <h5>Status</h5>
-      </div>
-
-       <div style={{border:"2px solid blue",backgroundColor:"teal"}}>
-        <h2>Sarthak</h2>
-        <h3>make a UT Design</h3>
-        <h5>Status</h5>
-      </div>
       
-       <div style={{border:"2px solid blue",backgroundColor:"teal"}}>
-        <h2>Sarthak</h2>
-        <h3>make a UT Design</h3>
-        <h5>Status</h5>
+
+
+      {
+         userData.map(function(elem,idx){
+          return <div key={idx} style={{border:"2px solid blue",backgroundColor:"teal"}}>
+        <h2>{elem.firstName}</h2>
+        <h3>{elem. taskSummary.active}</h3>
+        <h5>{elem. taskSummary.completed}</h5>
+        <h5>{elem.taskSummary.failed}</h5>
       </div>
+        })
+      }
+       
     </div>
   )
 }

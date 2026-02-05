@@ -1,4 +1,4 @@
-localStorage.clear()
+
 
 const employees = [
   {
@@ -103,8 +103,8 @@ const employees = [
 
     taskSummary: {
       active: 1,
-      newTask: 1,
-      completed: 1,
+      newTask: 2,
+      completed: 0,
       failed: 1
     },
 
@@ -149,10 +149,10 @@ const employees = [
     password: "123",
 
     taskSummary: {
-      active: 1,
+      active: 0,
       newTask: 1,
       completed: 1,
-      failed: 1
+      failed: 2
     },
 
     tasks: [

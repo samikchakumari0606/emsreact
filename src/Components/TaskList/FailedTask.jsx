@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FailedTask = () => {
+const FailedTask = ({data}) => {
   return (
     <div>
      Failed Task Page 
@@ -8,11 +8,11 @@ const FailedTask = () => {
       <div style={{ backgroundColor: "blue", height: "auto",border:"2px solid red" }}>
                 3
                  <div>
-                    <h2>high</h2>
-                    <h3>20 feb 2024</h3>
+                    <h2>{data.category}</h2>
+                    <h3>{data.date}</h3>
                 </div>
-                <h2>Make a youtube video</h2>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto soluta quia cumque quisquam animi.</p>
+                <h2>{data.title}</h2>
+                 <p>{data.description}</p>
         <div>
             <button>Failed</button>
         </div>
