@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import "./Login.css"
 
 const Login = ({handleLogin}) => {
 
@@ -21,15 +22,15 @@ const Login = ({handleLogin}) => {
     }
 
   return (
-    <div>
-      Login page
-      <div>
-        <form onSubmit={(e)=>submitHandler(e)}>
-            <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" required placeholder='Enter your email' />
+    <div className="LoginBody">
+    
+      <div className="LoginParent">
+        <form className='loginForm' onSubmit={(e)=>submitHandler(e)}>
+            <input className='loginInput' value={email} onChange={(e)=>setEmail(e.target.value)} type="email" required placeholder='Enter your email' />
              <br />
-            <input value={password} onChange={(e)=>setPassword(e.target.value)} type="password" required placeholder='Enter password' />
+            <input className='loginInput' value={password} onChange={(e)=>setPassword(e.target.value)} type="password" required placeholder='Enter password' />
              <br />
-            <button>Log In</button>
+            <button className='loginButton'>Log In</button>
         </form>
       </div>
     </div>

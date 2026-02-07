@@ -1,0 +1,59 @@
+/* Page background */
+.headerParent {
+  min-height: 100px;
+  width: 100%;
+   background-color:rgb(19, 10, 10); /* bottle green */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/* Header card */
+.headerUserName {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+/* Logout button */
+.headerLogout {
+  padding: 15px 30px;
+  background-color: red; /* bottle green */
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.headerLogout:hover {
+  background-color: black;
+  transform: translateY(-1px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Mobile */
+@media (max-width: 480px) {
+  .headerParent {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .headerUserName {
+    font-size: 18px;
+  }
+
+  .headerLogout {
+    width: 100%;
+  }
+}

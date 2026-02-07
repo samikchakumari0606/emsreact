@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import "./CSS/Header.css"
 
 const Header = (props) => {
 // console.log("data from header",data)
@@ -21,9 +22,9 @@ props.changeUser()
 
   // console.log(data)
   return (
-    <div style={{border:"2px solid red"}}>
-      <h1>Hello <br /> username </h1>
-      <button onClick={logOutUser}>logOut</button>
+    <div className='headerParent' >
+      <h1 className='headerUserName'>Hello <br /> username </h1>
+      <button className="headerLogout" onClick={logOutUser}>LogOut</button>
     </div>
   )
 }

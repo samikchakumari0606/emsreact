@@ -8,7 +8,7 @@ const EmployeeDashboard = (props) => {
   // console.log("employee dashboard", data)
   return (
     <div>
-      Employe page
+      {/* Employe page */}
       {/* <h1>{data.id}</h1> */}
       <Header changeUser={props.changeUser} data={props.data} />
       <TaskListNumbers data={props.data} />

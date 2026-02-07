@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { useContext } from 'react'
 import { AuthContext } from '../../Context/AuthProvider'
+import "./CSS/CreateTask.css"
 
 const CreateTask = () => {
 
@@ -92,23 +93,64 @@ const CreateTask = () => {
 
 
   return (
-    <div>
-       <div>
-            <form onSubmit={(e)=>submitHandler(e)}>
-                <h3>Task Title</h3>
-                <input value={taskTitle}  onChange={(e)=>setTaskTitle(e.target.value)} type="text" placeholder='Make a UI design' />
-                <br/>
-                <h3>Description</h3>
-                <textarea value={taskDescription}  onChange={(e)=>setTaskDescription(e.target.value)} name="" id="" cols="30" rows="10"></textarea>
-                 <h3>Date</h3>
-                 <input type="date" value={taskDate}  onChange={(e)=>setTaskDate(e.target.value)} />
-                 <br />
-                 <input type="text" value={asignTo}  onChange={(e)=>setAsignTo(e.target.value)} placeholder='enter employe name' />
-                 <h3>Category</h3>
-                 <input type="text" value={category}  onChange={(e)=>setCategory(e.target.value)} placeholder='design,dev, etc' />
-                 <br />
-                 <button>Create Task</button>
-            </form>
+    <div className='CreateTaskParent'>
+       <div className='CreateTaskDiv'>
+
+            <form className="CreateTaskForm" onSubmit={submitHandler}>
+
+  <div className="formRow">
+    <h3 className="CreateTaskText">Task Title</h3>
+    <input
+      className="CreateTaskInput"
+      value={taskTitle}
+      onChange={(e)=>setTaskTitle(e.target.value)}
+      type="text"
+      placeholder="Make a UI design"
+    />
+  </div>
+
+  <div className="formRow">
+    <h3 className="CreateTaskText">Description</h3>
+    <textarea
+      className="CreateTaskDescription"
+      value={taskDescription}
+      onChange={(e)=>setTaskDescription(e.target.value)}
+    />
+  </div>
+
+  <div className="formRow">
+    <h3 className="CreateTaskText">Date</h3>
+    <input
+      className="CreateTaskInput"
+      type="date"
+      value={taskDate}
+      onChange={(e)=>setTaskDate(e.target.value)}
+    />
+  </div>
+
+  <div className="formRow">
+    <h3 className="CreateTaskText">Assign To</h3>
+    <input
+      className="CreateTaskInput"
+      value={asignTo}
+      onChange={(e)=>setAsignTo(e.target.value)}
+      placeholder="Employee name"
+    />
+  </div>
+
+  <div className="formRow">
+    <h3 className="CreateTaskText">Category</h3>
+    <input
+      className="CreateTaskInput"
+      value={category}
+      onChange={(e)=>setCategory(e.target.value)}
+      placeholder="Design, Dev, etc"
+    />
+  </div>
+
+  <button className="CreateTaskBtn">Create Task</button>
+</form>
+
           </div>
     </div>
   )

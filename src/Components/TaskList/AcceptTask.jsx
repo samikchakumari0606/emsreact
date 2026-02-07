@@ -1,21 +1,20 @@
 import React from 'react'
 
-const AcceptTask = ({data}) => {
+const AcceptTask = ({ data }) => {
   return (
-    <div>
-        Accept Task Page
-      <div style={{ backgroundColor: "teal", height: "auto",border:"2px solid red" }}>
-                1
-                <div>
-                    <h2>{data.category}</h2>
-                    <h3>{data.date}</h3>
-                </div>
-                <h2>{data.title}</h2>
-                 <p>{data.description}</p>
-         <button>Mark as Completed</button>
-         <button>Mark as Failed</button>
+    <div className="taskCard">
+      <div className="taskHeader">
+        <h2>{data.category}</h2>
+        <h3>{data.date}</h3>
+      </div>
 
-       </div>
+      <h2 className="taskText">{data.title}</h2>
+      <p className="taskText">{data.description}</p>
+
+      <div className="taskBtnGroup">
+        <button className="taskBtn">Mark as Completed</button>
+        <button className="taskBtn">Mark as Failed</button>
+      </div>
     </div>
   )
 }

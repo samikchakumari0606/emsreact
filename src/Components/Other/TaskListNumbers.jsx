@@ -1,32 +1,26 @@
 import React from 'react'
+import "./CSS/TaskListNumber.css"
 
-const TaskListNumbers = ({data}) => {
+const TaskListNumbers = ({ data }) => {
   return (
-    <div>
-        TaskListNumber Page
-      <div style={{border:"2px solid blue"}}>
-        
-        <h2>{data.taskSummary.newTask}</h2>
-        <h3>New Task</h3>
+    <div className="TaskListNumberParent">
+
+      {/* Header Row */}
+      <div className="TaskListRow TaskListHeader">
+        <div>New Task</div>
+        <div>Completed Task</div>
+        <div>Accepted Task</div>
+        <div>Failed Task</div>
       </div>
 
-      <div style={{border:"2px solid blue"}}>
-        
-        <h2>{data.taskSummary.completed}</h2>
-        <h3>Completed Task</h3>
+      {/* Value Row */}
+      <div className="TaskListRow">
+        <div>{data.taskSummary.newTask}</div>
+        <div>{data.taskSummary.completed}</div>
+        <div>{data.taskSummary.active}</div>
+        <div>{data.taskSummary.failed}</div>
       </div>
 
-      <div style={{border:"2px solid blue"}}>
-        
-        <h2>{data.taskSummary.active}</h2>
-        <h3>Accepted Task</h3>
-      </div>
-
-      <div style={{border:"2px solid blue"}}>
-        
-        <h2>{data.taskSummary.failed}</h2>
-        <h3>Failed Task</h3>
-      </div>
     </div>
   )
 }

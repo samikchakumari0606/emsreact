@@ -1,22 +1,17 @@
 import React from 'react'
 
-const CompeleteTask = ({data}) => {
+const CompeleteTask = ({ data }) => {
   return (
-    <div>
-      Completed Task Page
-
-      <div style={{ backgroundColor: "green", height: "auto",border:"2px solid red" }}>
-                3
-                 <div>
-                    <h2>{data.category}</h2>
-                    <h3>{data.date}</h3>
-                </div>
-                <h2>{data.title}</h2>
-                 <p>{data.description}</p>
-        <div>
-            <button>Complete</button>
-        </div>
+    <div className="taskCard">
+      <div className="taskHeader">
+        <h2>{data.category}</h2>
+        <h3>{data.date}</h3>
       </div>
+
+      <h2 className="taskText">{data.title}</h2>
+      <p className="taskText">{data.description}</p>
+
+      <button className="taskBtn">Completed</button>
     </div>
   )
 }

@@ -1,0 +1,98 @@
+/* Page background */
+.CreateTaskParent {
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  font-family: cursive;
+  color: white;
+}
+
+/* Form container */
+.CreateTaskDiv {
+  width: 100%;
+  max-width: 850px;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* light white border */
+  padding: 30px;
+  border-radius: 12px;
+  margin: 20px 0; /* top & bottom spacing */
+}
+
+/* Form layout */
+.CreateTaskForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Each row: label | input */
+.formRow {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Labels */
+.CreateTaskText {
+  font-size: 16px;
+}
+
+/* Inputs & textarea */
+.CreateTaskInput,
+.CreateTaskDescription {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 6px;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  font-family: cursive;
+}
+
+/* Description height */
+.CreateTaskDescription {
+  min-height: 130px;
+  resize: none;
+}
+
+/* Placeholder */
+.CreateTaskInput::placeholder,
+.CreateTaskDescription::placeholder {
+  color: #cccccc;
+}
+
+/* Button wrapper */
+.CreateTaskBtn {
+  align-self: center;          /* center button */
+  margin-top: 20px;
+  padding: 12px 28px;          /* normal button width */
+  background-color: #d32f2f;   /* red */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.CreateTaskBtn:hover {
+  background-color: #b71c1c;
+  transform: translateY(-1px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr; /* stack label & input */
+  }
+
+  .CreateTaskText {
+    margin-bottom: 6px;
+  }
+}
